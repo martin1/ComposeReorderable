@@ -23,7 +23,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
@@ -112,7 +112,7 @@ private fun BottomNavigationBar(items: List<NavigationItem>, navController: NavC
 }
 
 private sealed class NavigationItem(var route: String, var icon: ImageVector, var title: String) {
-    object Lists : NavigationItem("lists", Icons.Default.List, "Lists")
+    object Lists : NavigationItem("lists", Icons.AutoMirrored.Filled.List, "Lists")
     object Grids : NavigationItem("grids", Icons.Default.Settings, "Grids")
     object Fixed : NavigationItem("fixed", Icons.Default.Star, "Fixed")
 }
